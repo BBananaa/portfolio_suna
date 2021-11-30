@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUNA BAE</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="project_style.css">
+  <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a694cad2cb.js" crossorigin="anonymous"></script>
+  <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <script src="src/j.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js" defer></script>
+  <script src="src/p5sketch.js" defer></script>
+  <script type="module" src="src/main.js" defer></script>
+  <script src="src/pacmanGame.js" defer></script>
+  <script src="src/momentum.js" defer></script>
+  <script src="src/project.js" defer></script>
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+</head>
+
+<body>
+  <div id="logo">BAE SUNA</div>
+  <div class="loader">
+    <div class="loading-top">
+      <div class="loadImg">
+        <div class="load-wrap">
+          <div class="color-bar color1"></div>
+          <div class="load-img1"><img src="img/load/loading01.png"></div>
+        </div>
+        <div class="load-wrap">
+          <div class="color-bar color2"></div>
+          <div class="load-img2"><img src="img/load/loading02.png"></div>
+        </div>
+        <div class="load-wrap">
+          <div class="color-bar color3"></div>
+          <div class="load-img3"><img src="img/load/loading03.png"></div>
+        </div>
+        <div class="load-wrap">
+          <div class="load-img4"><img src="img/load/loading04.png"></div>
+        </div>
+      </div>
+      <div class="loading"><span class="making">MAKING</span> <span class="percent"> 00</span>%</div>
+    </div>
+    <div class="loading-bottom">
+      <p class="load-text">SUNA BAE PORTFOLIO SUNA BAE PORTFOLIO SUNA BAE PORTFOLIO SUNA BAE PORTFOLIO SUNA BAE
+        PORTFOLIO SUNA BAE PORTFOLIO SUNA BAE PORTFOLIO SUNA BAE PORTFOLIO</p>
+    </div>
+  </div>
+  <header>
+    <ul id="gnb">
+      <li class="active gallery"><a href="#gallery">Gallery</a></li>
+      <li><a href="#project">Project</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#blog">Blog</a></li>
+    </ul>
+  </header>
+
+  <section id="gallery">
+    <div class="gallery-container"></div>
+    <div class="big-container">
+      <div class="closeBtn"><i class="lni lni-close"></i></div>
+      <div class="img-wrap"></div>
+      <p class="text"></p>
+    </div>
+  </section>
+
+  <section id="project">
+    <h1>PROJECT</h1>
+    <p class="pj-head">WEBSITE DESIGN & BRANDING</p>
+    <div class="pj01">
+      <div id="artU-banner">
+        <a href="art_u/index.html" target="blank">
+          <div class="pic01">
+            <div class="ani01">
+              <img src="img/project/pink.jpg">
+              <p class="txtbox02"><img src="img/project/text2.jpg"></p>
+            </div>
+          </div>
+          <div class="positionbox">
+          <div class="pic02 ani02">
+            <img src="img/project/green.jpg">
+          </div>
+          <div class="pic02 ani03">
+            <img src="img/project/grey.jpg">
+          </div>
+          <div class="pic02 ani04">
+            <img src="img/project/blue.jpg">
+          </div>		
+          </div>
+          <div class="txtbox01">
+            <h2>Online Museum of Art</h2>
+            <div class="logobell"><img src="img/project/logobell.png"></div>
+          </div>
+          <i class="ex-link fas fa-external-link-alt"></i>
+        </a>
+      </div>
+      <div class="artu-info">
+        <a class="link" href="art_u/index.html" target="blank">Hompage<i class="fas fa-chevron-right"></i></a>
+        <a class="link" href="art_u/guide.html" target="blank">Concept💾<i class="fas fa-chevron-right"></i></a>
+      </div>
+    </div>
+
+    <p class="pj-head">FUN WITH <span class="css">CSS</span></p>
+    <div class="pj02">
+      <div class="work01 cssWork">
+        <div class="calder">
+          <div class="calder-wrap">
+            <img src="art_u/images/store/calder1.png">
+            <div class="moving1">
+              <img src="art_u/images/store/calder2.png">
+              <img class="moving2" src="art_u/images/store/calder3.png">
+            </div>
+          </div>
+        </div>
+        <p class="pj-title">inspried by Alexander Calder</p>
+      </div>
+      <div class="work01 cssWork">
+        <div class="news">
+          <img src="art_u/images/news08.jpg" class="news1">
+          <img src="art_u/images/news04.jpg" class="news2">
+          <img src="art_u/images/news07.jpg" class="news3">
+          <img src="art_u/images/news10.jpg" class="news4">
+          <img src="art_u/images/news09.jpg" class="news5">
+        </div>
+        <p class="pj-title">Subscribe Me!</p>
+      </div>
+    </div>
+
+    <p class="pj-head">FUN WITH <span class="js">JS</span></p>
+    <div class="pj03">
+      <div class="work01">
+        <div id="coordinate">
+          <div class="line horizontal"></div>
+          <div class="line vertical"></div>
+          <div class="target"><img src="img/project/target.png" alt="target" /></div>
+          <span class="tag"></span>
+        </div>
+        <p class="pj-title">007 Find Coordinate. BAMBAM</p>
+      </div>
+      <div class="work01">
+        <div id=changeBg>
+          <button>💗 Give me color 💗</button>
+        </div>
+        <p class="pj-title">Color the World</p>
+      </div>
+      <div class="work01">
+        <div id="countdown">
+          <h2>Time Until Christmas</h2>
+          <h3 class="clock"></h3>
+        </div>
+        <p class="pj-title">Can't wait for Christmas🎄</p>
+      </div>
+      <div class="work01">
+        <div id="video-art">
+          <div class="p5video"></div>
+        </div>
+        <p class="pj-title">p5.js Video Art inspired by Nam June Paik</p>
+      </div>
+      <div class="work01">
+        <div id="carrot-game">
+          <div class="game-bg">
+            <div class="game_header">
+                <button class="game_button">
+                    <i class="fas fa-play"></i>
+                    <!--<i class="fas fa-stop"></i>-->
+                </button>
+                <span class="game_timer">00:00</span>
+                <span class="game_score">10</span>
+            </div>
+
+            <div class="game_field"></div>
+          </div>
+          <div class="pop-up pop-up_hidden">
+              <button class="pop-up_refresh">
+                  <i class="fas fa-redo"></i>
+              </button>
+              <span class="pop-up_message">Hello</span>
+          </div>
+        </div>
+        <p class="pj-title">Save the Carrots from the bugs🥕🐰</p>
+      </div>
+
+      <div class="work01">
+        <div id="num-Game">
+          <h2><span class="txt-motion1">Random</span> <span class="txt-motion2">Number</span> <span class="txt-motion1">Game</span></h2>
+          <form id="generateNum-form">
+              <label>Generate a number between 0 and</label>
+              <input required type="number">
+          </form>
+          <form id="guessNum-form">
+              <label for="guessNum">Guess the Number : </label>
+              <input id="guessNum" required type="number" name="guessNum">
+              <button>Play!</button>
+          </form>
+          <p class="playingNum"></p>
+          <h2 class="result"></h2>
+        </div>
+        <p class="pj-title">What number computer's thinking...</p>
+      </div>
+
+      <div id="pacman">
+        <div class="pacm-banner">
+          <p>PACMAN PACMAN PACMAN PACMAN PACMAN PACMAN PACMAN PACMAN</p>
+          <p>PACMAN PACMAN PACMAN PACMAN PACMAN PACMAN PACMAN PACMAN</p>
+          <p>PACMAN PACMAN PACMAN PACMAN PACMAN PACMAN PACMAN PACMAN</p>
+        </div>
+        <div class="board grid"></div>
+        <button class="pacman-play">Wanna Play?</button>
+      </div>
+
+    </div>
+
+    <div class="momentum">
+    <p class="mo-bg-ani">Momentum Momentum Momentum Momentum Momentum Momentum Momentum</p>
+      <div id="momentum">
+        <div class="top">
+          <div id="weather">
+            <span>Location</span>
+            <br>
+            <sapn>Weather</sapn>
+          </div>    
+          <h2 id="clock"></h2>
+          <div class="form">
+              <form id="login-form" class="hidden">
+                  <input required maxlength="30" type="text" placeholder="Your name">
+                  <button>Log In</button>
+              </form>
+              <h2 id="greeting" class="hidden"></h2>
+
+              <form id="todo-form">
+                  <input type="text" placeholder="Write a To-Do and Press Enter." required />
+              </form>
+              <ul id="todo-list"></ul>
+          </div>
+        </div>
+        <div class="bottom">
+          <div id="quote">
+            <span></span>
+            <br>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="playGround">
+    <h3>Score:<span id="score"></span></h3>
+    <button class="pacman-start">Start</button>
+    <p>🎉Win >= 300!🦾🎉</p>
+    <a id="close-game" href="#pacman"><i class="lni lni-close"></i></a>
+    <div class="add-grid grid"></div>
+  </div>
+
+  <section id="about">
+    <div class="portrait"><img src="img/about/profile.png"></div>
+    <h2>Hello:)) I'm Suna from Korea.</h2>  
+    <div class="intro">
+      <div class="intro-img">
+        <img src="img/about/illu.png">
+      </div>
+      <div class="intro-text">
+        <p>I can say I'm a Multipotentialite. I do many fun things, you'll get to know me little by little..</p>
+        <p>I majored in Art Education, which is really cool because it makes art contagious.
+          I have built extensive experience and knowledge in the art world. As art is inseparable from our lives and has no limits, it stimulates curiosity always to try various things.
+          In the physical world, I do painting, sculpture and crafts.
+          In the digital world, I build with code and do some art on pixels.
+        </p>
+      </div>
+    </div>
+    <h2>Computer Skills</h2>
+    <div class="skills">
+        <div class="skill-wrap">
+          <div class="skill">
+            <div class="skill-forth"><img src="img/about/skill01.png"></div>
+          </div>
+        </div>
+        <div class="skill-wrap">
+          <div class="skill">
+            <div class="skill-forth"><img src="img/about/skill02.png"></div>
+          </div>
+        </div>
+        <div class="skill-wrap">
+          <div class="skill">
+            <div class="skill-forth"><img src="img/about/skill03.png"></div>
+          </div>
+        </div>
+        <div class="skill-wrap">
+          <div class="skill">
+            <div class="skill-forth"><img src="img/about/skill04.png"></div>
+          </div>
+        </div>
+        <div class="skill-wrap">
+          <div class="skill">
+            <div class="skill-forth"><img src="img/about/skill05.png"></div>
+          </div>
+        </div>
+        <div class="skill-wrap">
+          <div class="skill">
+            <div class="skill-forth"><img src="img/about/skill06.png"></div>
+          </div>
+        </div>
+        <div class="skill-wrap">
+          <div class="skill">
+            <div class="skill-forth"><img src="img/about/skill07.png"></div>
+          </div>
+        </div>
+        <div class="skill-wrap">
+          <div class="skill">
+            <div class="skill-forth"><img src="img/about/skill08.png"></div>
+          </div>
+        </div>
+        <div class="skill-wrap">
+          <div class="skill">
+            <div class="skill-forth"><img src="img/about/skill09.png"></div>
+          </div>
+        </div>
+        <div class="skill-wrap">
+          <div class="skill">
+            <div class="skill-forth"><img src="img/about/skill10.png"></div>
+          </div>
+        </div>
+        <div class="skill-wrap">
+          <div class="skill">
+            <div class="skill-forth"><img src="img/about/skill11.png"></div>
+          </div>
+        </div>
+        <div class="skill-wrap">
+          <div class="skill">
+            <div class="skill-forth"><img src="img/about/skill12.png"></div>
+          </div>
+        </div>
+      
+    </div>
+    <h2>Hobby</h2>
+    <div class="hobby">
+      <div>
+        <img src="img/about/hobby(1).png">
+        <img class="hobby_color" src="img/about/hobby1_1.jpg">
+      </div>
+      <div>
+        <img src="img/about/hobby(2).png">
+        <img class="hobby_color" src="img/about/hobby1_2.jpg">
+      </div>
+      <div>
+        <img src="img/about/hobby(3).png">
+        <img class="hobby_color" src="img/about/hobby1_3.jpg">
+      </div>
+      <div>
+        <img src="img/about/hobby(4).png">
+        <img class="hobby_color" src="img/about/hobby1_4.png">
+      </div>
+      <div>
+        <img class="hobby_color" src="img/about/hobby1_5.png">
+        <img src="img/about/hobby(5).png">
+      </div>
+      <div>
+        <img class="hobby_color" src="img/about/hobby1_6.png">
+        <img src="img/about/hobby(6).png">
+      </div>
+    </div>
+  </section>
+
+  <section id="blog"></section>
+
+  <footer>
+    <p>made with 💗 by Suna</p>
+  </footer>
+</body>
+
+</html>
