@@ -11,7 +11,6 @@ export class Field {
     this.carrotCount = carrotCount;
     this.bugCount = bugCount;
     this.field = document.querySelector('.game_field');
-    this.fieldRect = this.field.getBoundingClientRect();
     this.field.addEventListener('click', this.onClick);
   }
   init() {
@@ -26,10 +25,11 @@ export class Field {
   }
 
   _addItem(className, count, imgPath) {
+    const fieldRect = this.field.getBoundingClientRect();
     const x1 = 0;
     const y1 = 0;
-    const x2 = this.fieldRect.width;
-    const y2 = this.fieldRect.height;
+    const x2 = fieldRect.width;
+    const y2 = fieldRect.height;
     for (let i = 0; i < count; i++) {
       const item = document.createElement('img');
       item.setAttribute('class', className);
