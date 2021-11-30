@@ -11,24 +11,24 @@ export function playCarrot() {
 export function playBug() {
   playSound(bugSound);
 }
-export function playAlert() {
-  playSound(alertSound);
-}
-export function playWin() {
-  playSound(winSound);
-}
-export function playBackground() {
-  playSound(bgSound);
-}
-export function stopBackground() {
-  stopSound(bgSound);
-}
+// export function playAlert() {
+//   playSound(alertSound);
+// }
+// export function playWin() {
+//   playSound(winSound);
+// }
+// export function playBackground() {
+//   playSound(bgSound);
+// }
+// export function stopBackground() {
+//   stopSound(bgSound);
+// }
 
 function playSound(sound) {
   sound.currentTime = 0;
   sound.play();
 }
 
-function stopSound(sound) {
-  sound.pause();
-}
+// function stopSound(sound) {
+//   sound.pause();
+// }
