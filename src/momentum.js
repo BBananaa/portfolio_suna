@@ -12,26 +12,26 @@ const momentumBg = document.querySelector("#momentum")
 momentumBg.style.backgroundImage = `url(./img/project/${chosenImage})`;
 
 // Weather
-const API_KEY = "079490b7bf1ed4e3698e6a7b7a44f11f";
+// const API_KEY = "079490b7bf1ed4e3698e6a7b7a44f11f";
 
-function onGeoOk(position) {
-    const lat = position.coords.latitude;
-    const lon = position.coords.longitude;
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
-    fetch(url).then(response => response.json()).then(data => {
-        const city = document.querySelector("#weather span:first-child");
-        const weather = document.querySelector("#weather sapn:last-child");
+// function onGeoOk(position) {
+//     const lat = position.coords.latitude;
+//     const lon = position.coords.longitude;
+//     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+//     fetch(url).then(response => response.json()).then(data => {
+//         const city = document.querySelector("#weather span:first-child");
+//         const weather = document.querySelector("#weather sapn:last-child");
 
-        city.innerText = data.name;
-        weather.innerText = `${data.weather[0].main} / ${data.main.temp}℃`;
-    });
-}
+//         city.innerText = data.name;
+//         weather.innerText = `${data.weather[0].main} / ${data.main.temp}℃`;
+//     });
+// }
 
-function onGeoError() {
-    alert("Can't find your location. No weather for you.");
-}
+// function onGeoError() {
+//     alert("Can't find your location. No weather for you.");
+// }
 
-navigator.geolocation.getCurrentPosition(onGeoOk);
+// navigator.geolocation.getCurrentPosition(onGeoOk);
 
 // Clock
 const momentumClock = document.querySelector('h2#clock');
