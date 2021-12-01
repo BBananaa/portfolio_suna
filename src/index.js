@@ -159,24 +159,36 @@ getPhotos().then(photos => {
       
       x = e.offsetX
       xx = x - startx
+      checkBoundary()
       if(i < 25) {
         items[i].style.left = `${left + (xx * 1.5)}px`;
       } else {
       items[i].style.left = `${left + (xx * 1.8)}px`;
     }
-      checkBoundary()
   
     })
+    gallContainer.addEventListener('touchstart', (e) => { 
+      startx = e.touches[0].pageX
+      left = parseInt(items[i].style.left);
+    });
+    gallContainer.addEventListener('touchend', (e) => {
+      x = e.changedTouches[0].pageX;
+      xx = x - startx;
+      checkBoundary()
+      items[i].style.left = `${left + xx}px`;
+    });
+    
     function checkBoundary() {
-      
       if (startx < x) {
           add = 1
         if (boundaryL) {
+          xx = 0
           return pressed = false;
         }      
       } else if (startx > x) {
         add = -1
         if (boundaryR) {
+          xx = 0
           return pressed = false;
         }
       }
