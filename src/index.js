@@ -75,7 +75,7 @@ getPhotos().then(photos => {
     let xx;
     let pressed = false;
     let wheel;
-    let left;
+//     let left;
     let xPos = 0;
     let add = -1
     let boundaryL;
@@ -132,7 +132,7 @@ getPhotos().then(photos => {
     });
     
     window.addEventListener('wheel', (e) => {
-      left = parseInt(items[i].style.left);
+//       left = parseInt(items[i].style.left);
       if(i % 2 === 0) wheel = e.deltaY / 3
       else wheel = e.deltaY / 4
       
@@ -143,12 +143,13 @@ getPhotos().then(photos => {
         add = 1
         if (boundaryL) return wheel = 0
       }
-      items[i].style.left = `${left + wheel}px`;
+//       items[i].style.left = `${left + wheel}px`;
+      return xPos = xPos + wheel;
     })
 
     gallContainer.addEventListener('mousemove', (e) => {
-      if(!pressed) 
-      return left = parseInt(items[i].style.left);
+      if(!pressed) return
+//       return left = parseInt(items[i].style.left);
       for (let img of artImgs) {
         if(e.target === img)
         return pressed = false;
@@ -160,26 +161,30 @@ getPhotos().then(photos => {
       x = e.offsetX
       xx = x - startx
       checkBoundary()
-      if(i < 25) {
-        items[i].style.left = `${left + (xx * 1.5)}px`;
-      } else {
-      items[i].style.left = `${left + (xx * 1.8)}px`;
-    }
+            return xPos = xPos + (xx / 40);
+
+//       if(i < 25) {
+//         items[i].style.left = `${left + (xx * 1.5)}px`;
+//       } else {
+//       items[i].style.left = `${left + (xx * 1.8)}px`;
+//     }
   
     })
     gallContainer.addEventListener('touchstart', (e) => { 
       startx = e.touches[0].pageX
-      left = parseInt(items[i].style.left);
+//       left = parseInt(items[i].style.left);
     });
     gallContainer.addEventListener('touchend', (e) => {
       x = e.changedTouches[0].pageX;
       xx = x - startx;
       checkBoundary()
-      if(i < 25) {
-        items[i].style.left = `${left + (xx * 1.5)}px`;
-      } else {
-        items[i].style.left = `${left + (xx * 1.8)}px`;
-      }
+            return xPos = xPos + (xx / 40);
+
+//       if(i < 25) {
+//         items[i].style.left = `${left + (xx * 1.5)}px`;
+//       } else {
+//         items[i].style.left = `${left + (xx * 1.8)}px`;
+//       }
     });
     
     function checkBoundary() {
