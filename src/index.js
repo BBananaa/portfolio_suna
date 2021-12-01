@@ -122,7 +122,7 @@ getPhotos().then(photos => {
     })  
     
     gallContainer.addEventListener('mousedown', (e) => {
-      e.preventDefault()
+      
       pressed = true;
       startx = e.offsetX
       gallContainer.style.cursor = 'grabbing'
