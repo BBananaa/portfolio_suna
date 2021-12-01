@@ -167,11 +167,11 @@ getPhotos().then(photos => {
     })
 
     gallContainer.addEventListener('touchstart', (e) => { 
-      startx = e.touches[0].pageX
       for (let img of artImgs) {
         if(e.target === img)
         return startx = false
       }
+      startx = e.touches[0].pageX
     }, false);
     
     gallContainer.addEventListener('touchmove', (e) => {
