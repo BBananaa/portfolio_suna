@@ -4,6 +4,7 @@ const bigConatiner = document.querySelector('.big-container')
 const imgWrap = document.querySelector('.img-wrap')
 const closeBtn = document.querySelector('.closeBtn')
 let artImgs;
+
 window.addEventListener('load', () => {
   const loader = document.querySelector('.loader')
   const percent = document.querySelector('.percent')
@@ -20,7 +21,7 @@ window.addEventListener('load', () => {
 
   setTimeout( () => {
     making.textContent = "LOADING"
-  }, 2000)
+  }, 1500)
 
   setTimeout( () => {
     loader.parentElement.removeChild(loader)
@@ -75,7 +76,6 @@ getPhotos().then(photos => {
     let xx;
     let pressed = false;
     let wheel;
-//     let left;
     let xPos = 0;
     let add = -1
     let boundaryL;
@@ -122,6 +122,7 @@ getPhotos().then(photos => {
     })  
     
     gallContainer.addEventListener('mousedown', (e) => {
+      e.preventDefault()
       for (let img of artImgs) {
           if(e.target === img)
           return !pressed;
@@ -132,10 +133,9 @@ getPhotos().then(photos => {
     });
     
     window.addEventListener('wheel', (e) => {
-//       left = parseInt(items[i].style.left);
-      if(i % 2 === 0) wheel = e.deltaY / 3
-      else wheel = e.deltaY / 4
-      
+      e.preventDefault()
+      if(i % 2 === 0) wheel = e.deltaY 
+      else wheel = e.deltaY / 2
       if(wheel < 0) {
         add = -1
         if (boundaryR) return wheel = 0
@@ -143,51 +143,38 @@ getPhotos().then(photos => {
         add = 1
         if (boundaryL) return wheel = 0
       }
-//       items[i].style.left = `${left + wheel}px`;
       return xPos = xPos + wheel;
     })
-
+  
     gallContainer.addEventListener('mousemove', (e) => {
+      e.preventDefault()
       if(!pressed) return
-//       return left = parseInt(items[i].style.left);
       for (let img of artImgs) {
         if(e.target === img)
         return pressed = false;
-    }
+      }
       gallContainer.style.cursor = 'grabbing'
-    
-      e.preventDefault();
-      
       x = e.offsetX
       xx = x - startx
       checkBoundary()
-            return xPos = xPos + (xx / 40);
-
-//       if(i < 25) {
-//         items[i].style.left = `${left + (xx * 1.5)}px`;
-//       } else {
-//       items[i].style.left = `${left + (xx * 1.8)}px`;
-//     }
-  
+      return xPos = xPos + (xx / 40);
     })
-    gallContainer.addEventListener('touchstart', (e) => { 
-      startx = e.touches[0].pageX
-//       left = parseInt(items[i].style.left);
-    });
-    gallContainer.addEventListener('touchend', (e) => {
-      x = e.changedTouches[0].pageX;
-      xx = x - startx;
-      checkBoundary()
-            return xPos = xPos + (xx / 40);
 
-//       if(i < 25) {
-//         items[i].style.left = `${left + (xx * 1.5)}px`;
-//       } else {
-//         items[i].style.left = `${left + (xx * 1.8)}px`;
-//       }
+    gallContainer.addEventListener('touchstart', (e) => { 
+      e.preventDefault()
+      startx = e.touches[0].pageX
     });
     
+    gallContainer.addEventListener('touchmove', (e) => {
+      e.preventDefault();
+      x = e.changedTouches[0].pageX;;
+      xx = x - startx
+      checkBoundary()
+      return xPos = xPos + (xx / 40);
+
+    })
     function checkBoundary() {
+      
       if (startx < x) {
           add = 1
         if (boundaryL) {
