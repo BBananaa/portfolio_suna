@@ -16,7 +16,7 @@ window.addEventListener('load', () => {
   const per = setInterval( () => {
     percent.textContent = String(i++).padStart(2, "0")
     if (i === 101) clearInterval(per)
-  }, 30) 
+  }, 20) 
 
   setTimeout( () => {
     making.textContent = "LOADING"
@@ -24,7 +24,7 @@ window.addEventListener('load', () => {
 
   setTimeout( () => {
     loader.parentElement.removeChild(loader)
-  }, 4500)
+  }, 3500)
 })
 
 
