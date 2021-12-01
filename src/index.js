@@ -175,7 +175,11 @@ getPhotos().then(photos => {
       x = e.changedTouches[0].pageX;
       xx = x - startx;
       checkBoundary()
-      items[i].style.left = `${left + xx}px`;
+      if(i < 25) {
+        items[i].style.left = `${left + (xx * 1.5)}px`;
+      } else {
+        items[i].style.left = `${left + (xx * 1.8)}px`;
+      }
     });
     
     function checkBoundary() {
