@@ -58,13 +58,13 @@ getPhotos().then(photos => {
   for (let i = 0; i < items.length; i++) {
     if(artImgs[i].naturalWidth * 1.3 < artImgs[i].naturalHeight) {
       items[i].style.width = `${randomNumber(6, 10)}rem`
-      items[i].style.top = `${randomNumber(12, 25)}vh`
+      items[i].style.top = `${randomNumber(12, 20)}%`
     } else if(artImgs[i].naturalWidth > artImgs[i].naturalHeight * 1.6) {
       items[i].style.width = `${randomNumber(10, 15)}rem`
-      items[i].style.top = `${randomNumber(15, 56)}vh`
+      items[i].style.top = `${randomNumber(15, 56)}%`
     } else {
       items[i].style.width = `${randomNumber(9, 13)}rem`
-      items[i].style.top = `${randomNumber(14, 55)}vh`
+      items[i].style.top = `${randomNumber(14, 55)}%`
     }
     
     items[i].style.left = `${randomNumber(gField / 2, gField * 6)}px`
@@ -123,19 +123,22 @@ getPhotos().then(photos => {
     
     gallContainer.addEventListener('mousedown', (e) => {
       e.preventDefault()
+      pressed = true;
+      startx = e.offsetX
+      gallContainer.style.cursor = 'grabbing'
       for (let img of artImgs) {
           if(e.target === img)
           return !pressed;
       }
-        pressed = true;
-        startx = e.offsetX
-        gallContainer.style.cursor = 'grabbing'
     });
     
     window.addEventListener('wheel', (e) => {
       e.preventDefault()
-      if(i % 2 === 0) wheel = e.deltaY 
-      else wheel = e.deltaY / 2
+      
+      if(i % 4 === 0) wheel = e.deltaY 
+      else if (i % 3 === 0) wheel = e.deltaY / 2
+      else wheel = e.deltaY / 3
+
       if(wheel < 0) {
         add = -1
         if (boundaryR) return wheel = 0
@@ -143,7 +146,7 @@ getPhotos().then(photos => {
         add = 1
         if (boundaryL) return wheel = 0
       }
-      return xPos = xPos + wheel;
+      xPos = xPos + wheel;
     })
   
     gallContainer.addEventListener('mousemove', (e) => {
@@ -156,25 +159,35 @@ getPhotos().then(photos => {
       gallContainer.style.cursor = 'grabbing'
       x = e.offsetX
       xx = x - startx
+
       checkBoundary()
-      return xPos = xPos + (xx / 40);
+      if(i % 4 === 0) xPos = xPos + (xx / 45);
+      else if(i % 3 === 0) xPos = xPos + (xx / 35);
+      else xPos = xPos + (xx / 30);
     })
 
     gallContainer.addEventListener('touchstart', (e) => { 
-      e.preventDefault()
       startx = e.touches[0].pageX
-    });
+      for (let img of artImgs) {
+        if(e.target === img)
+        return startx = false
+      }
+    }, false);
     
     gallContainer.addEventListener('touchmove', (e) => {
-      e.preventDefault();
+      for (let img of artImgs) {
+        if(e.target === img)
+        return xx = false;
+      }
       x = e.changedTouches[0].pageX;;
       xx = x - startx
       checkBoundary()
-      return xPos = xPos + (xx / 40);
+      if(i % 2 === 0) xPos = xPos + (xx / 40);
+      else if(i % 2 === 0) xPos = xPos + (xx / 30);
+      else xPos = xPos + (xx / 20);
 
-    })
+    }, false)
     function checkBoundary() {
-      
       if (startx < x) {
           add = 1
         if (boundaryL) {
