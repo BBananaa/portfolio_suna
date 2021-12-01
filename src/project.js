@@ -7,23 +7,17 @@ const sections = [...document.querySelectorAll('section')]
 
 sections[1].style.display = "none"
 sections[2].style.display = "none"
-// sections[3].style.display = "none"
+sections[3].style.display = "none"
 for (let i = 0; i < menus.length; i++) {
 
   menus[i].addEventListener('click', (e) => {
     const active = document.querySelector('.active')
     active.classList.remove('active')
     e.target.parentElement.classList.add('active')
-    //console.log(e.target.hash.substr(1))
-    const hash = e.target.hash
+   
     sections.forEach(section => {
       section.style.display = "none"
 
-      // if(hash === "#gallery") {
-      //   gallery.style.display = "block"
-      // } else if(hash === "#project") {
-      //   project.style.display = "block"
-      // }
       switch(e.target.hash) {
         case "#gallery":
           gallery.style.display = "block"
