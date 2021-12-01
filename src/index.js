@@ -61,7 +61,7 @@ getPhotos().then(photos => {
       items[i].style.top = `${randomNumber(12, 20)}%`
     } else if(artImgs[i].naturalWidth > artImgs[i].naturalHeight * 1.6) {
       items[i].style.width = `${randomNumber(10, 15)}rem`
-      items[i].style.top = `${randomNumber(15, 56)}%`
+      items[i].style.top = `${randomNumber(15, 70)}%`
     } else {
       items[i].style.width = `${randomNumber(9, 13)}rem`
       items[i].style.top = `${randomNumber(14, 55)}%`
