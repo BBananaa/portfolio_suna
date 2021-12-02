@@ -5,7 +5,7 @@ const imgWrap = document.querySelector('.img-wrap')
 const closeBtn = document.querySelector('.closeBtn')
 let artImgs;
 
-window.addEventListener('load', () => {
+
   const loader = document.querySelector('.loader')
   const percent = document.querySelector('.percent')
   const making = document.querySelector('.making')
@@ -26,7 +26,7 @@ window.addEventListener('load', () => {
   setTimeout( () => {
     loader.parentElement.removeChild(loader)
   }, 3500)
-})
+
 
 
 async function getPhotos() {
