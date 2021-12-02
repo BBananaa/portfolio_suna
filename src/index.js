@@ -133,8 +133,6 @@ getPhotos().then(photos => {
     });
     
     window.addEventListener('wheel', (e) => {
-      e.preventDefault()
-      
       if(i % 4 === 0) wheel = e.deltaY 
       else if (i % 3 === 0) wheel = e.deltaY / 2
       else wheel = e.deltaY / 3
