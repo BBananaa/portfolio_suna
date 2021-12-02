@@ -1,5 +1,5 @@
 * {
-  user-select: none;
+/*   user-select: none; */
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -331,7 +331,7 @@ footer {
 
 /* ABOUT */
 #about {
-  display: none;
+/*   display: none; */
   background: rgb(238, 230, 230);
   text-align: center;
 }
@@ -463,7 +463,7 @@ footer {
 }
 /* BLOG */
 #blog {
-  display: none;
+/*   display: none; */
   background: cadetblue;
   background: url("img/blog/bg.png") no-repeat;
   background-size: contain;
