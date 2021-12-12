@@ -85,10 +85,10 @@ getPhotos().then(photos => {
 
     headerGallery.addEventListener("click", () => {
       clearInterval(moving)
-      return moving = setInterval(move, randomNumber(6, 18));
+      return moving = setInterval(move, randomNumber(5, 14));
     })
 
-    let moving = setInterval(move, randomNumber(6, 18));
+    let moving = setInterval(move, randomNumber(5, 14));
 
     function move() {
       boundaryL = items.every(item => {
