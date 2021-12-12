@@ -1,0 +1,44 @@
+/* BLOG */
+#blog {
+  display: none;
+  /* background: cadetblue; */
+  width: 100%;
+  height: 200%;
+  background: white;
+}
+.blog-bg {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: auto;
+}
+.custom-shape-divider-bottom-1638759844 {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1638759844 svg {
+  position: relative;
+  display: block;
+  width: calc(155% + 1.3px);
+  height: 12vw;
+}
+
+.custom-shape-divider-bottom-1638759844 .shape-fill {
+  fill: #FFFFFF;
+}
+
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 2vw;
+  }
+  .skills {
+  padding: 0rem 1rem;
+  }
+}
