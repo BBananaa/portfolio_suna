@@ -10,13 +10,13 @@ let artImgs;
   const percent = document.querySelector('.percent')
   const making = document.querySelector('.making')
   const loadText = document.querySelector('.load-text')
-  let i = 1
+  let t = 1
 
   loadText.style.transform = "translateX(-2000px)"
 
   const per = setInterval( () => {
-    percent.textContent = String(i++).padStart(2, "0")
-    if (i === 101) clearInterval(per)
+    percent.textContent = String(t++).padStart(2, "0")
+    if (t === 101) clearInterval(per)
   }, 20) 
 
   setTimeout( () => {
