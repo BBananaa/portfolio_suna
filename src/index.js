@@ -25,7 +25,7 @@ let artImgs;
 
   setTimeout( () => {
     loader.parentElement.removeChild(loader)
-  }, 3500)
+  }, 4000)
 
 
 
