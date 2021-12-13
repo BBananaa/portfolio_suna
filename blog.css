@@ -38,7 +38,11 @@
   html {
     font-size: 2vw;
   }
-  .skills {
+  .skills, .hobby {
   padding: 0rem 1rem;
   }
+  .hobby div {
+    width: 20rem;
+    height: 20rem;
+  }  
 }
