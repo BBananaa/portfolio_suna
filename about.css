@@ -26,7 +26,7 @@
 .intro {
   display: flex;
   justify-content: flex-end;
-  padding: 1vw 7vw 3vw;
+  padding: 1vw 10vw 3vw;
   border-bottom: 2px solid #000;
   position: relative;
   /* z-index: 2; */
@@ -35,7 +35,7 @@
 .intro-img {
   width: 18%;
   position: absolute;
-  left: 5vw;
+  left: 8vw;
   bottom: -0.5vw;
 }
 .intro-text {
