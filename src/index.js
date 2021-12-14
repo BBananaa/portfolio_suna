@@ -66,7 +66,7 @@ getPhotos().then(photos => {
       items[i].style.width = `${randomNumber(9, 13)}rem`
       items[i].style.top = `${randomNumber(14, 55)}%`
     }
-    
+    console.log(artImgs[41].naturalWidth, artImgs[41].naturalHeight)
     items[i].style.left = `${randomNumber(gField / 2, gField * 6)}px`
     items[i].style.zIndex = `${Math.floor(randomNumber(10, 80))}`
     items[i].childNodes[1].style.padding = `${randomNumber(3, 12)}px`
