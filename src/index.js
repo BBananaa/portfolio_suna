@@ -6,26 +6,26 @@ const closeBtn = document.querySelector('.closeBtn')
 let artImgs;
 
 
-  const loader = document.querySelector('.loader')
-  const percent = document.querySelector('.percent')
-  const making = document.querySelector('.making')
-  const loadText = document.querySelector('.load-text')
-  let t = 1
+  // const loader = document.querySelector('.loader')
+  // const percent = document.querySelector('.percent')
+  // const making = document.querySelector('.making')
+  // const loadText = document.querySelector('.load-text')
+  // let t = 1
 
-  loadText.style.transform = "translateX(-2000px)"
+  // loadText.style.transform = "translateX(-2000px)"
 
-  const per = setInterval( () => {
-    percent.textContent = String(t++).padStart(2, "0")
-    if (t === 101) clearInterval(per)
-  }, 20) 
+  // const per = setInterval( () => {
+  //   percent.textContent = String(t++).padStart(2, "0")
+  //   if (t === 101) clearInterval(per)
+  // }, 20) 
 
-  setTimeout( () => {
-    making.textContent = "LOADING"
-  }, 1500)
+  // setTimeout( () => {
+  //   making.textContent = "LOADING"
+  // }, 1500)
 
-  setTimeout( () => {
-    loader.parentElement.removeChild(loader)
-  }, 4000)
+  // setTimeout( () => {
+  //   loader.parentElement.removeChild(loader)
+  // }, 3500)
 
 
 
@@ -47,14 +47,17 @@ function getPhotosHtml(photos) {
   return photosHtml
 }
 
+let gField;
+let items;
+
 getPhotos().then(photos => {    
   gallContainer.innerHTML = `${getPhotosHtml(photos)}`    
-  
-  const gField = gallContainer.getBoundingClientRect().width
-  const items = Array.from(document.getElementsByClassName("item"))
-
+  gField = gallContainer.getBoundingClientRect().width
+  items = Array.from(document.getElementsByClassName("item"))
   artImgs = Array.from(document.getElementsByClassName("artImg-s"))
-  console.log(artImgs)
+  
+}).then(() => {
+  console.log(artImgs[41].naturalWidth, artImgs[41].naturalHeight)
 
   for (let i = 0; i < items.length; i++) {
     if(artImgs[i].naturalWidth * 1.3 < artImgs[i].naturalHeight) {
@@ -67,7 +70,6 @@ getPhotos().then(photos => {
       items[i].style.width = `${randomNumber(9, 13)}rem`
       items[i].style.top = `${randomNumber(14, 55)}%`
     }
-    console.log(artImgs[41].naturalWidth, artImgs[41].naturalHeight)
     items[i].style.left = `${randomNumber(gField / 2, gField * 6)}px`
     items[i].style.zIndex = `${Math.floor(randomNumber(10, 80))}`
     items[i].childNodes[1].style.padding = `${randomNumber(3, 12)}px`
@@ -100,12 +102,12 @@ getPhotos().then(photos => {
       })
 
       xPos = xPos + add;
-      items[i].style.transform = `translateX(${xPos}px)`;
       if (boundaryL) {
         add = -1
       } else if (boundaryR) {
         add = 1      
       }
+      items[i].style.transform = `translateX(${xPos}px)`;
 
       if(gallery.style.display === "none") {
         clearInterval(moving)
@@ -224,8 +226,9 @@ getPhotos().then(photos => {
     text.innerHTML = ""
     bigConatiner.style.display = 'none'
   })
-
 })
+
+
 function randomNumber(min, max) {
   let random = Math.floor(Math.random() * (max - min) + min);
   return random
