@@ -54,6 +54,7 @@ getPhotos().then(photos => {
   const items = Array.from(document.getElementsByClassName("item"))
 
   artImgs = Array.from(document.getElementsByClassName("artImg-s"))
+  console.log(artImgs)
 
   for (let i = 0; i < items.length; i++) {
     if(artImgs[i].naturalWidth * 1.3 < artImgs[i].naturalHeight) {
