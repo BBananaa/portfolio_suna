@@ -267,6 +267,12 @@ body{ font-family:'Josefin sans', sans-serif;
 	width:333px;
 	height:420px;
 	border:1px solid #aaa;
+	padding-top: 20px;
+  	box-sizing: border-box;
+}
+.imgbox img {
+	display: block;
+	width: 100%;
 }
 .imgbox div{
 	width:270px;
