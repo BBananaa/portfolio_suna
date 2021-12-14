@@ -6,26 +6,26 @@ const closeBtn = document.querySelector('.closeBtn')
 let artImgs;
 
 
-  // const loader = document.querySelector('.loader')
-  // const percent = document.querySelector('.percent')
-  // const making = document.querySelector('.making')
-  // const loadText = document.querySelector('.load-text')
-  // let t = 1
+  const loader = document.querySelector('.loader')
+  const percent = document.querySelector('.percent')
+  const making = document.querySelector('.making')
+  const loadText = document.querySelector('.load-text')
+  let t = 1
 
-  // loadText.style.transform = "translateX(-2000px)"
+  loadText.style.transform = "translateX(-2000px)"
 
-  // const per = setInterval( () => {
-  //   percent.textContent = String(t++).padStart(2, "0")
-  //   if (t === 101) clearInterval(per)
-  // }, 20) 
+  const per = setInterval( () => {
+    percent.textContent = String(t++).padStart(2, "0")
+    if (t === 101) clearInterval(per)
+  }, 20) 
 
-  // setTimeout( () => {
-  //   making.textContent = "LOADING"
-  // }, 1500)
+  setTimeout( () => {
+    making.textContent = "LOADING"
+  }, 1500)
 
-  // setTimeout( () => {
-  //   loader.parentElement.removeChild(loader)
-  // }, 3500)
+  setTimeout( () => {
+    loader.parentElement.removeChild(loader)
+  }, 3500)
 
 
 
