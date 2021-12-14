@@ -5,7 +5,6 @@ const imgWrap = document.querySelector('.img-wrap')
 const closeBtn = document.querySelector('.closeBtn')
 let artImgs;
 
-
   const loader = document.querySelector('.loader')
   const percent = document.querySelector('.percent')
   const making = document.querySelector('.making')
@@ -25,7 +24,7 @@ let artImgs;
 
   setTimeout( () => {
     loader.parentElement.removeChild(loader)
-  }, 3500)
+  }, 4000)
 
 
 
