@@ -343,6 +343,7 @@ footer {
   height: 100vh;
   z-index: 1100;
   animation: background 0.5s 1 forwards;
+  cursor: default;
 }
 
 @keyframes background {
