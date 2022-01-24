@@ -100,13 +100,15 @@ window.addEventListener("load", () => {
           return item.getBoundingClientRect().x < gField /1.3
         })
   
-        xPos = xPos + add;
-        if (boundaryL) {
-          add = -1
-        } else if (boundaryR) {
-          add = 1      
-        }
-        items[i].style.transform = `translateX(${xPos}px)`;
+
+          xPos = xPos + add;
+          if (boundaryL) {
+            add = -1
+          } else if (boundaryR) {
+            add = 1      
+          }
+          items[i].style.transform = `translateX(${xPos}px)`;
+        
   
         if(gallery.style.display === "none") {
           clearInterval(moving)
@@ -119,7 +121,7 @@ window.addEventListener("load", () => {
       gallContainer.addEventListener('mouseenter', () => {
           // gallContainer.style.cursor = 'ew-resize'
       })
-      window.addEventListener('mouseup', () => {
+      gallContainer.addEventListener('mouseup', () => {
           pressed = false;
       })  
       
@@ -134,7 +136,7 @@ window.addEventListener("load", () => {
         }
       });
       
-      window.addEventListener('wheel', (e) => {
+      gallContainer.addEventListener('wheel', (e) => {
         if(i % 4 === 0) wheel = e.deltaY 
         else if (i % 3 === 0) wheel = e.deltaY / 2
         else wheel = e.deltaY / 3
