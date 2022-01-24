@@ -5,9 +5,11 @@ const about = document.querySelector('#about')
 const blog = document.querySelector('#blog')
 const sections = [...document.querySelectorAll('section')]
 
-sections[1].style.display = "none"
-sections[2].style.display = "none"
-sections[3].style.display = "none"
+window.addEventListener("load", () => {
+  sections[1].style.display = "none"
+  sections[2].style.display = "none"
+})
+
 for (let i = 0; i < menus.length; i++) {
 
   menus[i].addEventListener('click', (e) => {
