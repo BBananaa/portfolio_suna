@@ -13,7 +13,7 @@ let items;
   const loadText = document.querySelector('.load-text')
   let t = 1
 
-  window.addEventListener('load', () => {
+  
 
   loadText.style.transform = "translateX(-2000px)"
 
@@ -29,7 +29,7 @@ let items;
   setTimeout( () => {
     loader.parentElement.removeChild(loader)
   }, 3500)
-})
+
 
 
 
