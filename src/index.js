@@ -20,7 +20,7 @@ let items;
   const per = setInterval( () => {
     percent.textContent = String(t++).padStart(2, "0")
     if (t === 101) clearInterval(per)
-  }, 20) 
+  }, 7) 
 
   setTimeout( () => {
     making.textContent = "LOADING"
@@ -90,10 +90,10 @@ window.addEventListener("load", () => {
   
       headerGallery.addEventListener("click", () => {
         clearInterval(moving)
-        return moving = setInterval(move, randomNumber(2, 12));
+        return moving = setInterval(move, randomNumber(1, 13));
       })
   
-      let moving = setInterval(move, randomNumber(2, 12));
+      let moving = setInterval(move, randomNumber(1, 13));
   
       function move() {
         boundaryL = items.every(item => {
