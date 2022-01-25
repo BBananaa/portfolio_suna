@@ -264,7 +264,7 @@ header {
   content: '';
   transition: all 0.2s;
   width: 0;
-  border-bottom: 1px solid balck;
+  border-bottom: 1px solid black;
   display: block;
 }
 
