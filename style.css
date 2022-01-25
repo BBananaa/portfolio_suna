@@ -257,13 +257,14 @@ header {
   font-size: 1rem;
   display: block;
   padding: 5px 5px;
+  color: black;
 }
 
 #gnb li a::after {
   content: '';
   transition: all 0.2s;
   width: 0;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid balck;
   display: block;
 }
 
