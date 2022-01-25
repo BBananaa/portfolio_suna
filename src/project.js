@@ -6,7 +6,7 @@ const blog = document.querySelector('#blog')
 const sections = [...document.querySelectorAll('section')]
 
 window.addEventListener("load", () => {
-  sections[1].style.display = "none"
+  sections[0].style.display = "none"
   sections[2].style.display = "none"
 })
 
