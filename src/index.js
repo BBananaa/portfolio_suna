@@ -20,7 +20,7 @@ let items;
   const per = setInterval( () => {
     percent.textContent = String(t++).padStart(2, "0")
     if (t === 101) clearInterval(per)
-  }, 7) 
+  }, 18) 
 
   setTimeout( () => {
     making.textContent = "LOADING"
