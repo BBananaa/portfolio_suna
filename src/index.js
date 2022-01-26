@@ -13,8 +13,6 @@ let items;
   const loadText = document.querySelector('.load-text')
   let t = 1
 
-  
-
   loadText.style.transform = "translateX(-2000px)"
 
   const per = setInterval( () => {
@@ -29,7 +27,6 @@ let items;
   setTimeout( () => {
     loader.parentElement.removeChild(loader)
   }, 3500)
-
 
 
 
@@ -67,10 +64,10 @@ window.addEventListener("load", () => {
         items[i].style.top = `${randomNumber(12, 20)}%`
       } else if(artImgs[i].naturalWidth > artImgs[i].naturalHeight * 1.6) {
         items[i].style.width = `${randomNumber(10, 15)}rem`
-        items[i].style.top = `${randomNumber(15, 70)}%`
+        items[i].style.top = `${randomNumber(15, 75)}%`
       } else {
         items[i].style.width = `${randomNumber(9, 13)}rem`
-        items[i].style.top = `${randomNumber(14, 55)}%`
+        items[i].style.top = `${randomNumber(14, 60)}%`
       }
       items[i].style.left = `${randomNumber(gField / 2, gField * 6)}px`
       items[i].style.zIndex = `${Math.floor(randomNumber(10, 80))}`
@@ -90,10 +87,10 @@ window.addEventListener("load", () => {
   
       headerGallery.addEventListener("click", () => {
         clearInterval(moving)
-        return moving = setInterval(move, randomNumber(1, 13));
+        return moving = setInterval(move, randomNumber(2, 14));
       })
   
-      let moving = setInterval(move, randomNumber(1, 13));
+      let moving = setInterval(move, randomNumber(2, 14));
   
       function move() {
         boundaryL = items.every(item => {
@@ -117,22 +114,15 @@ window.addEventListener("load", () => {
           clearInterval(moving)
         }
       }
-      
-      gallContainer.addEventListener('mouseup', () => {
-          // gallContainer.style.cursor = 'ew-resize'
-      })
-      gallContainer.addEventListener('mouseenter', () => {
-          // gallContainer.style.cursor = 'ew-resize'
-      })
+    
       gallContainer.addEventListener('mouseup', () => {
           pressed = false;
       })  
       
       gallContainer.addEventListener('mousedown', (e) => {
-        
         pressed = true;
-        startx = e.offsetX
-        // gallContainer.style.cursor = 'grabbing'
+        startx = e.offsetX;
+
         for (let img of artImgs) {
             if(e.target === img)
             return !pressed;
@@ -140,9 +130,7 @@ window.addEventListener("load", () => {
       });
       
       gallContainer.addEventListener('wheel', (e) => {
-        if(i % 4 === 0) wheel = e.deltaY 
-        else if (i % 3 === 0) wheel = e.deltaY / 2
-        else wheel = e.deltaY / 3
+        wheel = randomNumber(e.deltaY / 8, e.deltaY / 3) 
   
         if(wheel < 0) {
           add = -1
@@ -161,14 +149,15 @@ window.addEventListener("load", () => {
           if(e.target === img)
           return pressed = false;
         }
-        // gallContainer.style.cursor = 'grabbing'
+
         x = e.offsetX
         xx = x - startx
   
         checkBoundary()
-        if(i % 4 === 0) xPos = xPos + (xx / 80);
-        else if(i % 3 === 0) xPos = xPos + (xx / 75);
-        else xPos = xPos + (xx / 65);
+        if(i < 10) xPos = xPos + (xx / 65);
+        else if(i < 20) xPos = xPos + (xx / 80);
+        else if(i < 30) xPos = xPos + (xx / 90);
+        else xPos = xPos + (xx / 100);
       })
   
       gallContainer.addEventListener('touchstart', (e) => { 
@@ -187,9 +176,10 @@ window.addEventListener("load", () => {
         x = e.changedTouches[0].pageX;;
         xx = x - startx
         checkBoundary()
-        if(i % 2 === 0) xPos = xPos + (xx / 40);
-        else if(i % 2 === 0) xPos = xPos + (xx / 30);
-        else xPos = xPos + (xx / 20);
+        if(i < 10) xPos = xPos + (xx / 60);
+        else if(i < 20) xPos = xPos + (xx / 50);
+        else if(i < 30 ) xPos = xPos + (xx / 40);
+        else xPos = xPos + (xx / 30);
   
       }, false)
       function checkBoundary() {
