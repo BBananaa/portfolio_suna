@@ -320,6 +320,10 @@ footer {
   background: rgba(138, 138, 138, 0.336);
   -webkit-box-shadow: 7px 7px 41px 14px rgba(128, 115, 107, 0.4);
   box-shadow: 7px 7px 41px 14px rgba(128, 115, 107, 0.5);
+  transition: transform 0.5s;
+}
+.artwork:hover {
+  transform: scale(1.05);
 }
 
 .artImg-s {
