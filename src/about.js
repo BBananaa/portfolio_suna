@@ -1,3 +1,4 @@
+const secAbout = document.querySelector('#about')
   const canvas = document.getElementById("bg-canvas");
   const ctx = canvas.getContext("2d");
   ctx.canvas.width  = canvas.getBoundingClientRect().width;
@@ -114,3 +115,4 @@
     mouse.y = undefined;
   }, 1000);
 
+  secAbout.style.display = "none"
