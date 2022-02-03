@@ -1,6 +1,7 @@
 
 /* ABOUT */
 #about {
+  /* display: none; */
   background: rgb(238, 230, 230);
   text-align: center;
 }
@@ -116,7 +117,7 @@
   background: olive;
 }
 .hobby {
-  padding: 0vw 10vw 5vw;
+  padding: 0vw 10vw 3vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -144,4 +145,7 @@
 }
 #about .hobby div:hover .hobby_color {
   opacity: 1;
+}
+#about>h3 {
+  padding-bottom: 1vw;
 }
