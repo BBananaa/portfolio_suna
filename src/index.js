@@ -19,10 +19,9 @@ let items;
     percent.textContent = String(t++).padStart(2, "0")
     if (t === 101) clearInterval(per)
   }, 18) 
-
-  setTimeout( () => {
-    making.textContent = "LOADING"
-  }, 1500)
+  window.addEventListener("load", () => {
+      making.textContent = "LOADING"
+  })
 
   setTimeout( () => {
     loader.parentElement.removeChild(loader)
@@ -59,20 +58,30 @@ window.addEventListener("load", () => {
   console.log(artImgs[41].naturalWidth, artImgs[41].naturalHeight)
 
   for (let i = 0; i < items.length; i++) {
-      if(artImgs[i].naturalWidth * 1.3 < artImgs[i].naturalHeight) {
-        items[i].style.width = `${randomNumber(6, 10)}rem`
+      if(i < 5) {
+        items[i].style.width = `${randomNumber(20, 26)}rem`
+        items[i].style.top = `${randomNumber(12, 70)}%`
+        items[i].style.zIndex = `${Math.floor(randomNumber(50, 70))}`
+      } else if ( 4 < i && i < 13 ) {
+        items[i].style.width = `${randomNumber(14, 18)}rem`
+        items[i].style.top = `${randomNumber(12, 55)}%`
+        items[i].style.zIndex = `${Math.floor(randomNumber(50, 70))}`
+      } else if ( 31 < i && i < 38 ) {
+        items[i].style.width = `${randomNumber(8, 15)}rem`
+        items[i].style.top = `${randomNumber(12, 65)}%`
+        items[i].style.zIndex = `${Math.floor(randomNumber(10, 49))}`
+      } else if( i > 37) {
+        items[i].style.width = `${randomNumber(6, 12)}rem`
         items[i].style.top = `${randomNumber(12, 20)}%`
-      } else if(artImgs[i].naturalWidth > artImgs[i].naturalHeight * 1.6) {
-        items[i].style.width = `${randomNumber(10, 15)}rem`
-        items[i].style.top = `${randomNumber(15, 75)}%`
+        items[i].style.zIndex = `${Math.floor(randomNumber(10, 49))}`
       } else {
-        items[i].style.width = `${randomNumber(9, 13)}rem`
-        items[i].style.top = `${randomNumber(14, 60)}%`
+        items[i].style.width = `${randomNumber(8, 14)}rem`
+        items[i].style.top = `${randomNumber(20, 55)}%`
+        items[i].style.zIndex = `${Math.floor(randomNumber(10, 49))}`
       }
-      items[i].style.left = `${randomNumber(gField / 2, gField * 6)}px`
-      items[i].style.zIndex = `${Math.floor(randomNumber(10, 80))}`
+      items[i].style.left = `${randomNumber(gField / 6, gField * 8)}px`
       items[i].childNodes[1].style.padding = `${randomNumber(3, 12)}px`
-  
+
       let startx;
       let x;
       let xx;
@@ -87,10 +96,10 @@ window.addEventListener("load", () => {
   
       headerGallery.addEventListener("click", () => {
         clearInterval(moving)
-        return moving = setInterval(move, randomNumber(2, 14));
+        return moving = setInterval(move, randomNumber(1, 24));
       })
   
-      let moving = setInterval(move, randomNumber(2, 14));
+      let moving = setInterval(move, randomNumber(1, 24));
   
       function move() {
         boundaryL = items.every(item => {
@@ -154,9 +163,10 @@ window.addEventListener("load", () => {
         xx = x - startx
   
         checkBoundary()
-        if(i < 10) xPos = xPos + (xx / 65);
-        else if(i < 20) xPos = xPos + (xx / 80);
-        else if(i < 30) xPos = xPos + (xx / 90);
+        if(i < 8) xPos = xPos + (xx / 60);
+        else if(i < 16) xPos = xPos + (xx / 70);
+        else if(i < 24) xPos = xPos + (xx / 80);
+        else if(i < 32) xPos = xPos + (xx / 90);
         else xPos = xPos + (xx / 100);
       })
   
@@ -176,9 +186,10 @@ window.addEventListener("load", () => {
         x = e.changedTouches[0].pageX;;
         xx = x - startx
         checkBoundary()
-        if(i < 10) xPos = xPos + (xx / 60);
-        else if(i < 20) xPos = xPos + (xx / 50);
-        else if(i < 30 ) xPos = xPos + (xx / 40);
+        if(i < 8) xPos = xPos + (xx / 70);
+        else if(i < 16) xPos = xPos + (xx / 60);
+        else if(i < 24 ) xPos = xPos + (xx / 50);
+        else if(i < 32 ) xPos = xPos + (xx / 40);
         else xPos = xPos + (xx / 30);
   
       }, false)
