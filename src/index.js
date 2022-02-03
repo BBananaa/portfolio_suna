@@ -62,7 +62,7 @@ window.addEventListener("load", () => {
         items[i].style.width = `${randomNumber(20, 26)}rem`
         items[i].style.top = `${randomNumber(12, 70)}%`
         items[i].style.zIndex = `${Math.floor(randomNumber(50, 70))}`
-      } else if ( 4 < i && i < 13 ) {
+      } else if ( 4 < i && i < 14 ) {
         items[i].style.width = `${randomNumber(14, 18)}rem`
         items[i].style.top = `${randomNumber(12, 55)}%`
         items[i].style.zIndex = `${Math.floor(randomNumber(50, 70))}`
