@@ -1,7 +1,6 @@
 // Background
 const bgImages = ["bg01.jpg", "bg02.jpg", "bg03.jpg", "bg05.jpg"];
 
-const chosenImage = bgImages[Math.floor(Math.random() * bgImages.length)];
 
 // const bgImage = document.createElement("img");
 
@@ -9,9 +8,14 @@ const chosenImage = bgImages[Math.floor(Math.random() * bgImages.length)];
 
 // document.body.appendChild(bgImage);
 const momentumBg = document.querySelector("#momentum")
+let chosenImage = bgImages[Math.floor(Math.random() * bgImages.length)];
 momentumBg.style.backgroundImage = `url(./img/project/${chosenImage})`;
+menus[1].addEventListener('click', () => {
+    chosenImage = bgImages[Math.floor(Math.random() * bgImages.length)];
+    momentumBg.style.backgroundImage = `url(./img/project/${chosenImage})`;
+})
 
-// Weather
+// // Weather
 // const API_KEY = "079490b7bf1ed4e3698e6a7b7a44f11f";
 
 // function onGeoOk(position) {
