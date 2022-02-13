@@ -48,11 +48,16 @@
   /* z-index: 2; */
   position: relative;
 }
+.email {
+  position: relative;
+  top: 1rem;
+}
 .intro-text p {
   font-family: 'system-ui';
   font-family: 'arial', 'sans-serif';
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   text-align: left;
+  line-height: 1.5;
 }
 .skills {
   padding: 0rem 10rem 5rem;
