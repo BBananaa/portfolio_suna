@@ -51,6 +51,7 @@
 .email {
   position: relative;
   top: 1rem;
+  user-select: text;
 }
 .intro-text p {
   font-family: 'system-ui';
