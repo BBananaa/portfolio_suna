@@ -52,6 +52,9 @@
   top: 1rem;
   user-select: text;
 }
+.email a {
+  color: #000;
+}
 .intro-text p {
   font-family: 'system-ui';
   font-family: 'arial', 'sans-serif';
