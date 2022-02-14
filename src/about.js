@@ -6,9 +6,9 @@ const secAbout = document.querySelector('#about')
   let particleArray = [];
 
   const colours = [
-      'rgba(255,255,255,0.3)',
-      'rgba(173,216,230, 0.6)',
-      'rgba(211,211,211,0.6)',
+      'rgba(255,255,255,0.2)',
+      'rgba(173,216,230, 0.3)',
+      'rgba(211,211,211,0.3)',
   ];
   const maxSize = 40;
   const minSize = 0;
