@@ -16,7 +16,7 @@
 
 #about .portrait {
   padding: 8vw 0 0vw 0;
-  background: cadetblue;
+  background: #eee6e6;
   /* z-index: 2; */
 }
 #about .portrait img {
