@@ -49,7 +49,7 @@
   },
   {
     "src": "img/art(13).jpg",
-    "title": ""
+    "title": "watercolor on canvas"
   },
   {
     "src": "img/art(14).png",
@@ -81,7 +81,7 @@
   },
   {
     "src": "img/art(21).jpg",
-    "title": "digital painting"
+    "title": "pencil drawing"
   },
   {
     "src": "img/art(22).jpg",
@@ -105,11 +105,11 @@
   },
   {
     "src": "img/art(27).jpg",
-    "title": "watercolor on Korean traditional fan"
+    "title": "watercolor on Korean Traditional Fan"
   },
   {
     "src": "img/art(28).jpg",
-    "title": "wire sculpture"
+    "title": "oil on canvas"
   },
   {
     "src": "img/art(29).jpg",
@@ -137,7 +137,7 @@
   },
   {
     "src": "img/art(35).jpg",
-    "title": "digital painting"
+    "title": ""watercolor on Korean traditional paper"
   },
   {
     "src": "img/art(36).jpg",
@@ -170,5 +170,9 @@
   {
     "src": "img/art(43).jpg",
     "title": "sculpture and plaster moulding"
+  },
+  {
+    "src": "img/art(44).jpg",
+    "title": "oil on canvas"
   }
 ]
