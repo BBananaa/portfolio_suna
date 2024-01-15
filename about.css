@@ -15,12 +15,12 @@
 }
 
 #about .portrait {
-  padding: 8vw 0 0vw 0;
+ /* padding: 8vw 0 0vw 0; */
   background: #eee6e6;
   /* z-index: 2; */
 }
 #about .portrait img {
-  width: 30rem;
+ /* width: 30rem; */
   margin: auto;
   position: relative;
 }
