@@ -44,7 +44,7 @@
 }
 #about h2 {
   font-size: 2.5rem;
-  padding: 3rem 0;
+  padding: 3rem 0 1rem 0;
   position: relative;
 }
 .email {
@@ -158,3 +158,4 @@
   padding-bottom: 1vw;
   position: relative;
 }
+
