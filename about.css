@@ -47,6 +47,11 @@
   padding: 3rem 0 1rem 0;
   position: relative;
 }
+#about h3 {
+  font-size: 1.5rem;
+  /* padding: 3rem 0 1rem 0; */
+  left: 0
+}
 .email {
   position: relative;
   top: 1rem;
@@ -158,4 +163,5 @@
   padding-bottom: 1vw;
   position: relative;
 }
+
 
