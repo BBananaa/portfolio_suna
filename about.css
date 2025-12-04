@@ -52,6 +52,9 @@
   padding: 0 0 0.7rem 0;
   text-align: left;
 }
+#about a {
+  color: #000;
+}
 .email {
   position: relative;
   top: 1rem;
@@ -163,6 +166,7 @@
   padding-bottom: 1vw;
   position: relative;
 }
+
 
 
 
